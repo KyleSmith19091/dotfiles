@@ -1,0 +1,13 @@
+snippet create "Makefile template" 
+CC = g++
+CFLAGS = -g -Wall
+VERSION = 11
+TARGET = main
+	
+run:
+	$(CC) $(CFLAGS) -std=c++$(VERSION) ./src/*.cpp -I ./include -o $(TARGET)
+	./$(TARGET)
+
+clean:
+	rm -f main
+endsnippet

@@ -13,4 +13,3 @@ source $HOME/.config/nvim/general/visuals.vim
 source $HOME/.config/nvim/general/indentation.vim
 " ================ Misc ====================
 source $HOME/.config/nvim/general/misc.vim
-

@@ -9,5 +9,5 @@ noremap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1
 
 " show nerd tree always on the right instead on the left
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 

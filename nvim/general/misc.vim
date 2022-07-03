@@ -3,7 +3,6 @@ set path+=**
 set wildmenu
 set showcmd
 
-
 " ================ File management ==================
  
 " Turn off swap files
@@ -20,6 +19,7 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
+set shell=zsh
 
 " ================ Folds ============================
 
@@ -27,12 +27,10 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
-
-" ================ Srolling =========================
+" ================ Scrolling =========================
 
 " Start scrolling when we're 8 lines away from margins
 set scrolloff=8
-
  
 " ================ Encoding =========================
 
@@ -44,7 +42,7 @@ endif
 " ================ Number column ====================
  
 " numbers
-set number " see the line number column
+set number
 
 " Toggle relative numbering, and set to absolute on loss of focus or insert mode
 autocmd InsertEnter * :set nornu
@@ -87,7 +85,6 @@ set lazyredraw
 set ttyfast
 set ttimeoutlen=10
 
-
 " ================ Abbreviations ====================
 
 iab wiht with
@@ -100,7 +97,6 @@ iab tihs this
 iab mian main
 iab funciton function
 iab funcition function
-
 
 " ================ Misc =============================
 
@@ -123,12 +119,12 @@ set history=1000
 " this fixes the problem
 set backspace=indent,eol,start
 
-" to avoid hitting:
-" 'press ENTER or type command to continue'
-" add 'silent' keyword before the command
-" 
-" open a gnome-terminal with a shortcut
-noremap <leader><CR> :silent !gnome-terminal<CR>
-
 "disable preview window
 set completeopt-=previewe
+
+" Let cursor go one after the last char on line
+set ve+=onemore
+
+set splitbelow
+
+let g:python3_host_prog="/usr/local/bin/python3"

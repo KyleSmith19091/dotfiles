@@ -1,0 +1,46 @@
+snippet cout "quick cout"
+cout << "${1:value}" << "\n";
+endsnippet
+
+snippet fori "Quick for loop"
+for(int ${1:i} = 0; ${1:i} < ${2:v}; ${1:i}++){
+	${3:content}	
+}
+endsnippet
+
+snippet create "Quick and easy main file" 
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+	${1:content}
+
+	return 0;
+}
+endsnippet
+
+snippet classCreate "Simple class template for header file"
+#ifndef ${1:name} 
+#define ${1:name}
+class ${2:name}{
+	private:
+
+
+	public:
+		${2:name}();
+		~${2:name}();
+};	
+#endif
+endsnippet
+
+snippet tempt "Quick template prefix"
+template<class T>
+${1:name}<T>::${2:name}
+endsnippet
+
+snippet ifn "Header Guard"
+#ifndef ${1:name}
+#define ${1:name}
+endsnippet

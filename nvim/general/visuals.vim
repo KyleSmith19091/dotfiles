@@ -1,6 +1,4 @@
 syntax on
 set background=dark
+set termguicolors
 colorscheme gruvbox
-" enable 256bit colors - also: override gnome-terminal's settings
-set t_Co=256
-
